@@ -1,0 +1,431 @@
+<!-- Works Cited:“12 Great Examples of Community Forum Website Design.” SaaS Landing Page, 15 Aug. 2023, saaslandingpage.com/articles/12-great-examples-of-community-forum-website-design/.“Best Smartwatch 2021: Our Editor’s Top Review Picks Revealed.” Wareable, 28 Jan. 2021, www.wareable.com/smartwatches/best-smartwatch-reviews-compared-8286.Hoehe, Margret R., and Florence Thibaut. “Going Digital: How Technology Use May Influence Human Brains and Behavior.” Dialogues in Clinical Neuroscience, vol. 22, no. 2, 22 June 2020, pp. 93–97, www.ncbi.nlm.nih.gov/pmc/articles/PMC7366947/, https://doi.org/10.31887/dcns.2020.22.2/mhoehe.Kahn, Peter H., et al. “The Human Relation with Nature and Technological Nature.” Current Directions in Psychological Science, vol. 18, no. 1, Feb. 2009, pp. 37–42, depts.washington.edu/hints/publications/Human_Relation_Technological_Nature.pdf, https://doi.org/10.1111/j.1467-8721.2009.01602.x.United Nations. “The Impact of Digital Technologies.” United Nations, 2020, www.un.org/en/un75/impact-digital-technologies. -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyEvoke — Shared Memories</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">My<span>Evoke</span></h1>
+    <nav class="nav">
+      <button class="nav-btn" data-route="home" aria-current="page">Home</button>
+      <button class="nav-btn" data-route="feed">Memories</button>
+      <button class="nav-btn" data-route="share">Share</button>
+    </nav>
+    <div class="header-actions">
+      <button id="musicToggle" class="music-btn" aria-pressed="false" aria-label="Play site music">▶ Play Music</button>
+      <button id="themeToggle" class="nav-btn" aria-label="Toggle dark mode">Dark</button>
+    </div>
+    <audio id="bgMusic" src="music/emotional.mp3" preload="auto" loop></audio>
+  </header>
+
+  <main id="app">
+   
+    <section id="home" class="view active" aria-labelledby="welcome-title">
+      <div class="hero-block">
+        <div class="hero-inner">
+          <div class="hero-title-slot">
+            <h1 id="evokeTitle" class="evoke-title" aria-label="EVOKE">EVOKE</h1>
+          </div>
+          <p id="welcome-title" class="subtitle">
+            <strong>MyEvoke</strong> — a forum to share, replay, and reflect on multisensory memories.
+          </p>
+          <figure class="watch-wrap">
+            <img id="watchImg" class="watch" src="" alt="Evoke watch" />
+          </figure>
+          <div class="hero-actions">
+            <button class="cta enter" data-route="feed" aria-label="Enter memories">Enter Memories</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="wall-block">
+        <div id="imageWall" class="image-wall" aria-label="Memory mosaic"></div>
+      </div>
+    </section>
+
+    
+    <section id="feed" class="view" aria-labelledby="feed-title">
+      <div class="toolbar">
+        <h2 id="feed-title">Shared Memories</h2>
+        <input id="search" type="search" placeholder="Search by title, tag, user…" aria-label="Search memories" />
+      </div>
+
+  
+      <article class="spotlight spotlight-month" role="article" aria-labelledby="som-title">
+        <div class="spotlight-badge">Memory of the Month</div>
+        <div class="spotlight-body">
+          <div class="spotlight-text">
+            <h3 id="som-title">LUKA — My Old Friend</h3>
+            <p class="som-excerpt">
+              A tender archive of Henry and Luka — warmth by the fire, the old car in the drive,
+              and a park at golden hour. A meditation on love, loss, and memory.
+            </p>
+            <div class="som-actions">
+              <button class="cta" data-route="story-month">Read the Memory</button>
+              <button id="somLike" class="like" aria-pressed="false">♡ <span id="somLikeCount">0</span></button>
+            </div>
+          </div>
+          <img class="spotlight-img" src="images/lukaphoto.jpg" alt="Luka — memory of the month thumbnail" />
+        </div>
+      </article>
+
+      
+      <div class="mini-spotlights">
+        <article class="spotlight spotlight-compact" role="article" aria-labelledby="sow-title">
+          <div class="spotlight-badge soft">Memory of the Week</div>
+          <div class="spotlight-body compact">
+            <div class="spotlight-text">
+              <h3 id="sow-title">Max’s 21st — Pizza & Stardust</h3>
+              <p class="som-excerpt">
+                I swear we blinked and the backyard turned into a mini festival — pizza van humming, wood-smoke and basil in the fairy lights, friends yelling over the playlist, cake trying to escape. Hot slices, burnt fingers, dumb jokes — one of those nights you feel in your chest.
+              </p>
+              <div class="som-actions">
+                <button class="cta outline" data-route="story-week">Read the Memory</button>
+                <button id="sowLike" class="like" aria-pressed="false">♡ <span id="sowLikeCount">0</span></button>
+              </div>
+            </div>
+            <img class="spotlight-img compact" src="images/3.jpg" alt="Memory of the Week thumbnail" />
+          </div>
+        </article>
+
+        <article class="spotlight spotlight-compact" role="article" aria-labelledby="sod-title">
+          <div class="spotlight-badge soft">Memory of the Day</div>
+          <div class="spotlight-body compact">
+            <div class="spotlight-text">
+              <h3 id="sod-title">Blue Mountains — Andy’s Ridge Walk</h3>
+              <p class="som-excerpt">
+                Left early while the fog was still hanging in the trees. Boots on wet rock, breath making little clouds, then the sun slid in and the valley opened up like a door. Didn’t overthink it — just walked, listened to birds being loud, and let the place reset my head. Simple, clean, good.
+              </p>
+              <div class="som-actions">
+                <button class="cta outline" data-route="story-day">Read the Memory</button>
+                <button id="sodLike" class="like" aria-pressed="false">♡ <span id="sodLikeCount">0</span></button>
+              </div>
+            </div>
+            <img class="spotlight-img compact" src="images/10.jpg" alt="Memory of the Day thumbnail" />
+          </div>
+        </article>
+      </div>
+
+     
+      <ul id="postList" class="posts" aria-live="polite"></ul>
+    </section>
+
+  
+    <section id="story-month" class="view" aria-labelledby="story-month-title">
+      <button class="back-btn back-fab" data-route="feed" aria-label="Back to Memories">← Back</button>
+      <header class="story-header">
+        <h2 id="story-month-title">LUKA — My Old Friend</h2>
+        <div class="story-sub">
+          Selected Memory of the Month · by <span class="author">u/henry_28</span>
+          <button id="detailLikeMonth" class="like" aria-pressed="false">♡ <span id="detailLikeCountMonth">0</span></button>
+        </div>
+      </header>
+
+      <div class="story-grid">
+        <div class="story-media">
+          <div class="video-grid">
+            <div class="video-wrap"><video muted playsinline preload="metadata"><source src="videos/luka1.mp4" type="video/mp4" /></video><button class="zoom" aria-label="Zoom video">⤢</button></div>
+            <div class="video-wrap"><video muted playsinline preload="metadata"><source src="videos/luka2.mp4" type="video/mp4" /></video><button class="zoom" aria-label="Zoom video">⤢</button></div>
+            <div class="video-wrap"><video muted playsinline preload="metadata"><source src="videos/luka3.mp4" type="video/mp4" /></video><button class="zoom" aria-label="Zoom video">⤢</button></div>
+            <div class="video-wrap"><video muted playsinline preload="metadata"><source src="videos/luka4.mp4" type="video/mp4" /></video><button class="zoom" aria-label="Zoom video">⤢</button></div>
+          </div>
+
+          <div class="sensory sensory-big">
+            <h3>Sensory Lab</h3>
+            <p>Open enhanced memory channels:</p>
+            <div class="sensory-actions">
+              <button class="chip" data-sense="smell-month">Smell</button>
+              <button class="chip" data-sense="sound-month">Sound</button>
+              <button class="chip" data-sense="temperature-month">Temperature</button>
+              <button class="chip" data-sense="emotion-month">Emotion</button>
+              <button class="download-btn primary" data-download>Download</button>
+            </div>
+          </div>
+
+          <section class="comments" aria-label="Comments">
+            <h3>Comments</h3>
+            <ul id="commentListMonth" class="comment-list"></ul>
+            <form id="commentFormMonth" class="comment-form">
+              <input id="commentInputMonth" type="text" placeholder="Add a comment…" aria-label="Add a comment" required />
+              <button type="submit" class="cta">Post</button>
+            </form>
+          </section>
+        </div>
+
+        <div class="story-text-wrap">
+          <article class="story-text" id="monthIntro" aria-label="Memory intro">
+            I had never known a day without Luka. From the moment my parents brought home that clumsy little red heeler pup — paws too big for his body, eyes full of mischief — he was just… there. A part of me. We grew up together, speaking this unspoken language of tail wags, glances, and quiet moments.
+
+            I can still see his copper coat, speckled with pale spots that caught the sunlight. His eyes always followed me, ready for the next walk, the next game, or just to sit beside me in silence. He was sturdy, built to run alongside my bike for hours or trot with me across paddocks without a single complaint.
+
+            Some memories feel sharper than others. The winter night by the fireplace — I was reading, and he was curled at my feet, his fur glowing in the firelight. Every so often, he'd glance up at me, thump his tail, like he was saying, “I'm here.” That's enough.
+
+            Or that cold morning when I was fixing my old white Falcon. Luka stood nearby, ears pricked, watching like he understood. His tail swayed in a slow rhythm, just happy to be with me.
+
+            And then… the golden afternoon in the park. The sun was low, the grass warm, and I was crouched with a tennis ball in my hand. Luka sat so still, eyes locked on the ball, muscles ready to spring. The second I moved, he shot forward, pure joy in motion.
+
+            But he grew old. Walks got shorter. His run turned into careful steps. Soft white fur crept around his muzzle. And one quiet afternoon at the vet's, he lay in my lap, breathing slower and slower as I whispered, “Good boy… good boy…” until that was the only sound left.
+
+            The apartment was too quiet after that. His leash still hung by the door. The bowl stayed in the corner. What scared me most wasn't the silence — it was forgetting. The smell of his fur after a day outside. The sound of his bark across the yard. The way he leaned against me.
+
+            That's when I turned to my EVOKE watch. I'd worn it for years, not realising it had been recording so many moments with him. The first playback was like a punch to the chest — I was back in the park, the air warm, the scent of earth in the breeze, Luka's low growl rumbling through my palm as I held the ball.
+
+            I got lost in those recordings. Luka by the fire. Luka in the driveway. Luka running in the park. Every detail was there — the light, the sound, even the way the grass felt under my hand. But the more I played them, the more the real world faded. Food had no taste. People's voices felt thin. Why live in a world without Luka when I could step into one where he still existed?
+
+            That was the moment I realised how deeply technology can change the way we deal with loss. EVOKE wasn't just a watch. It was a doorway. A way to bend time and bring the past into the present with frightening precision. At first, it felt like a gift — a way to keep Luka close. But I started to see how easily it could become a trap.
+
+            The problem is, memory in real life is imperfect. It fades, blurs, and distorts over time. That's part of what makes it human. Forgetting, as painful as it is, forces us to move forward.
+
+            EVOKE removed that barrier. It gave me a perfect version of Luka — untouched by age or death — and once I had that, reality felt inadequate.
+
+            I think this is where the danger lies: when a memory becomes more vivid than the present, it's hard to come back. The brain doesn't separate “then” from “now” when the sensory details are exact. The scent of the grass, the sound of his paws hitting the ground, the weight of him leaning against me — it wasn't just remembering, it was being there. And once you've been there again, it's hard to accept that you can't stay.
+
+            But I also wonder — is this really any different from what humans have always done? We've always looked for ways to hold on. First it was stories. Then photographs. Then videos. Each step brought us closer to reliving the past. EVOKE just happens to be the step where we can actually step back inside it.
+
+            And maybe that's the real shift: the line between remembering and living is no longer clear. The question isn't just “should we look back” — it's “how much time should we spend there?” I'm still figuring out my answer.
+
+            Because the truth is, part of me knows I can't stay in those moments forever. But another part… the part that still hears Luka's bark in my sleep… doesn't want to leave at all.
+          </article>
+          <button id="readMoreMonthTop" class="cta read-more-btn">Read more…</button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="story-week" class="view" aria-labelledby="story-week-title">
+      <button class="back-btn back-fab" data-route="feed" aria-label="Back to Memories">← Back</button>
+      <header class="story-header">
+        <h2 id="story-week-title">Max’s 21st — Pizza & Stardust</h2>
+        <div class="story-sub">
+          Memory of the Week · by <span class="author">u/max_a</span>
+          <button id="detailLikeWeek" class="like" aria-pressed="false">♡ <span id="detailLikeCountWeek">0</span></button>
+        </div>
+      </header>
+
+      <div class="story-grid">
+        <div class="story-media">
+          <div class="video-grid one small">
+            <div class="video-wrap">
+              <video muted playsinline preload="metadata"><source src="videos/party.mp4" type="video/mp4" /></video>
+              <button class="zoom" aria-label="Zoom video">⤢</button>
+            </div>
+          </div>
+
+          <div class="sensory sensory-big">
+            <h3>Sensory Lab</h3>
+            <div class="sensory-actions">
+              <button class="chip" data-sense="smell-week">Smell</button>
+              <button class="chip" data-sense="sound-week">Sound</button>
+              <button class="chip" data-sense="temperature-week">Temperature</button>
+              <button class="chip" data-sense="emotion-week">Emotion</button>
+              <button class="download-btn primary" data-download>Download</button>
+            </div>
+          </div>
+
+          <section class="comments" aria-label="Comments">
+            <h3>Comments</h3>
+            <ul id="commentListWeek" class="comment-list"></ul>
+            <form id="commentFormWeek" class="comment-form"></form>
+              <input id="commentInputWeek" type="text" placeholder="Add a comment…" aria-label="Add a comment" required />
+              <button type="submit" class="cta">Post</button>
+            </form>
+          </section>
+        </div>
+
+        <article class="story-text" id="fullStoryWeek" aria-label="Short memory text">
+          I swear we blinked and the backyard turned into a mini festival — the pizza van humming, wood-smoke and basil floating in the lights, friends yelling along to dumb songs, frosting sliding off the cake. We grabbed slices too hot to hold and laughed until we had to sit down. Big silly energy. Felt good in the bones.
+        </article>
+      </div>
+    </section>
+
+    <!-- MEMORY DETAIL — Day -->
+    <section id="story-day" class="view" aria-labelledby="story-day-title">
+      <button class="back-btn back-fab" data-route="feed" aria-label="Back to Memories">← Back</button>
+      <header class="story-header">
+        <h2 id="story-day-title">Blue Mountains — Andy’s Ridge Walk</h2>
+        <div class="story-sub">
+          Memory of the Day · by <span class="author">u/andy_hikes</span>
+          <button id="detailLikeDay" class="like" aria-pressed="false">♡ <span id="detailLikeCountDay">0</span></button>
+        </div>
+      </header>
+
+      <div class="story-grid">
+        <div class="story-media">
+          <div class="video-grid one">
+            <div class="video-wrap">
+              <video muted playsinline preload="metadata"><source src="videos/hike.mp4" type="video/mp4" /></video>
+              <button class="zoom" aria-label="Zoom video">⤢</button>
+            </div>
+          </div>
+
+          <div class="image-strip">
+            <img src="images/10.jpg" alt="hike still 1" />
+            <img src="images/11.jpg" alt="hike still 2" />
+            <img src="images/12.jpg" alt="hike still 3" />
+          </div>
+
+          <div class="sensory sensory-big">
+            <h3>Sensory Lab</h3>
+            <div class="sensory-actions">
+              <button class="chip" data-sense="smell-day">Smell</button>
+              <button class="chip" data-sense="sound-day">Sound</button>
+              <button class="chip" data-sense="temperature-day">Temperature</button>
+              <button class="chip" data-sense="emotion-day">Emotion</button>
+              <button class="download-btn primary" data-download>Download</button>
+            </div>
+          </div>
+
+          <section class="comments" aria-label="Comments">
+            <h3>Comments</h3>
+            <ul id="commentListDay" class="comment-list"></ul>
+            <form id="commentFormDay" class="comment-form">
+              <input id="commentInputDay" type="text" placeholder="Add a comment…" aria-label="Add a comment" required />
+              <button type="submit" class="cta">Post</button>
+            </form>
+          </section>
+        </div>
+
+        <article class="story-text" id="fullStoryDay" aria-label="Short memory text">
+          Left early while the fog was still hanging in the trees. Boots on wet rock, breath making little clouds, then the sun slid in and the valley opened up like a door. Didn’t overthink it — just walked, listened to birds being loud, and let the place reset my head. Simple, clean, good.
+        </article>
+      </div>
+    </section>
+
+
+    <section id="story-generic" class="view" aria-labelledby="story-generic-title">
+      <button class="back-btn back-fab" data-route="feed" aria-label="Back to Memories">← Back</button>
+      <header class="story-header">
+        <h2 id="story-generic-title">Memory</h2>
+        <div class="story-sub">
+          by <span class="author" id="genericAuthor">u/myevoker</span>
+          <button id="detailLikeGeneric" class="like" aria-pressed="false">♡ <span id="detailLikeCountGeneric">0</span></button>
+        </div>
+      </header>
+
+      <div class="story-grid">
+        <div class="story-media">
+          <div class="image-grid one">
+            <img id="genericImage" alt="Memory image" />
+          </div>
+
+          <div class="sensory sensory-big">
+            <h3>Sensory Lab</h3>
+            <div class="sensory-actions">
+              <button class="chip" id="sensSmell">Smell</button>
+              <button class="chip" id="sensSound">Sound</button>
+              <button class="chip" id="sensTemp">Temperature</button>
+              <button class="chip" id="sensEmotion">Emotion</button>
+              <button class="download-btn primary" data-download>Download</button>
+            </div>
+          </div>
+
+          <section class="comments" aria-label="Comments">
+            <h3>Comments</h3>
+            <ul id="commentListGeneric" class="comment-list"></ul>
+            <form id="commentFormGeneric" class="comment-form">
+              <input id="commentInputGeneric" type="text" placeholder="Add a comment…" aria-label="Add a comment" required />
+              <button type="submit" class="cta">Post</button>
+            </form>
+          </section>
+        </div>
+
+        <article class="story-text" id="genericText" aria-label="Memory text"></article>
+      </div>
+    </section>
+
+    <!-- SHARE (only here) -->
+    <section id="share" class="view" aria-labelledby="share-title">
+      <div class="share-wrap">
+        <h2 id="share-title">Share a Memory</h2>
+        <p>Upload a capture to MyEvoke. </p>
+        <form id="shareForm" class="share-form">
+          <label>Title <input type="text" id="shareTitle" required></label>
+          <label>Description <textarea id="shareDesc" rows="6" required></textarea></label>
+          <div class="share-grid">
+            <label>Video <input type="file" id="shareVideo" accept="video/*"></label>
+            <label>Images <input type="file" id="shareImages" accept="image/*" multiple></label>
+            <label>Audio <input type="file" id="shareAudio" accept="audio/*"></label>
+          </div>
+          <div class="share-actions vertical">
+            <button class="upload-evoke-btn" type="button" data-upload-evoke>Upload from Evoke</button>
+            <button class="cta" type="submit">Submit</button>
+          </div>
+        </form>
+        <div id="sharePreview" class="share-preview" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GENERIC MODAL -->
+  <dialog id="genericModal" class="modal" aria-label="Detail dialog">
+    <form method="dialog"><button class="close" aria-label="Close">✕</button></form>
+    <article class="modal-article">
+      <header class="post-head">
+        <h3 id="modalTitle">Title</h3>
+        <div class="meta"><span id="modalUser"></span> · <span id="modalTags"></span></div>
+      </header>
+      <section id="modalBody" class="story"></section>
+      <footer class="post-foot">
+        <button id="likeBtn" class="like" aria-pressed="false">♡ <span id="likeCount">0</span></button>
+      </footer>
+    </article>
+  </dialog>
+
+  
+  <dialog id="fullStoryModal" class="modal wide" aria-label="Full memory">
+    <form method="dialog"><button class="close" aria-label="Close">✕</button></form>
+    <article class="modal-article">
+      <h3>LUKA — My Old Friend (Full Memory)</h3>
+      <section id="fullStoryContent" class="story"></section>
+    </article>
+  </dialog>
+
+  
+  <dialog id="videoModal" class="modal video-modal" aria-label="Video player">
+    <form method="dialog"><button class="close" aria-label="Close">✕</button></form>
+    <video id="zoomVideo" controls playsinline></video>
+  </dialog>
+
+  <!-- CONNECT DEVICE MODAL -->
+  <dialog id="connectModal" class="modal connect-modal" aria-label="Connect Evoke">
+    <form method="dialog"><button class="close" aria-label="Close">✕</button></form>
+    <div class="connect-wrap">
+      <button class="return-btn" type="button" aria-label="Return">← Return</button>
+      <button class="connect-cta" autofocus>Please Connect to Your Evoke Device</button>
+    </div>
+  </dialog>
+
+  <!-- FEED ITEM TEMPLATE -->
+  <template id="postTemplate">
+    <li class="post">
+      <button class="expand" aria-label="Open memory">
+        <img class="thumb" alt="" />
+        <div class="info">
+          <h3 class="title"></h3>
+          <div class="meta"><span class="user"></span> · <span class="tags"></span></div>
+          <p class="excerpt"></p>
+        </div>
+      </button>
+      <div class="actions">
+        <button class="vote" aria-pressed="false" title="Upvote">▲ <span class="score">0</span></button>
+        <button class="comment" title="Comments (mock)">💬</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
+</html>
+</html>
+</html>
+</html>
+</html>
